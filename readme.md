@@ -19,7 +19,6 @@ Objectives
 
 #Angular Ref
 
-* [Treehouse](http://teamtreehouse.com/library/angularjs)
 * [Intro Angular](https://github.com/sf-wdi-17/notes/blob/master/lectures/week-10/_1_monday/dusk/intro_to_angular.md)
 * [8 steps](https://github.com/wdi-sf-fall/intro-to-angular-in-eight-steps)
 * [8 steps instructions](https://github.com/sf-wdi-17/notes/blob/master/lectures/week-10/_1_monday/dusk/eight_step_angular.md)
