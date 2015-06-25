@@ -20,10 +20,11 @@ Objectives
 #Angular Ref
 
 * [Intro Angular](https://github.com/sf-wdi-17/notes/blob/master/lectures/week-10/_1_monday/dusk/intro_to_angular.md)
-* [8 steps](https://github.com/wdi-sf-fall/intro-to-angular-in-eight-steps)
+
+
+##HW
 * [8 steps instructions](https://github.com/sf-wdi-17/notes/blob/master/lectures/week-10/_1_monday/dusk/eight_step_angular.md)
 * [Angular Quora](https://github.com/sf-wdi-17/notes/blob/master/lectures/week-10/_4_thursday/dusk/ANGULAR_%E2%99%A5_RAILS.md)
-
 
 
 ##Intro
@@ -31,20 +32,25 @@ Objectives
 [Pre-reading](https://docs.angularjs.org/guide/introduction
 )
 
+AngularJS is a client-side Javascript framework for adding interactivity to HTML. It lets you use HTML as your template language and lets you extend HTML's syntax to express your application's components clearly and succinctly.
+
+[Sites built with Angular](https://builtwith.angularjs.org/)
 
 ##jQuery vs Angular
 
 **DOM Manipulation** libraries like jQuery are best for visual polish to already existing data.
 
-**MVC libraries** like Angular are best for maintaining a connection between the HTML view and the data.
+**MVC libraries** frameworks like Angular are best for maintaining a connection between the HTML view and the data.
+
+With a partner, come up with an example of an application that would be suited for jQuery and a different example that is better suited for Angular.
 
 ##MVC
 
 Angular is an MVC. The...
 
-* `Model` sources and organizes the data
-* `Controller` contains logic for a single view
-* `View` visualizes the data
+* `Model` manages the data
+* `Controller` contains the behavior for a single view
+* `View` presents the data
 
 ##HTML Setup
 
