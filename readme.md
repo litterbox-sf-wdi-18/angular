@@ -17,20 +17,12 @@ Objectives
 * Custom Directives
 
 
-#Angular Ref
+#Prereading
 
-* [Intro Angular](https://github.com/sf-wdi-17/notes/blob/master/lectures/week-10/_1_monday/dusk/intro_to_angular.md)
-
-
-##HW
-* [8 steps instructions](https://github.com/sf-wdi-17/notes/blob/master/lectures/week-10/_1_monday/dusk/eight_step_angular.md)
-* [Angular Quora](https://github.com/sf-wdi-17/notes/blob/master/lectures/week-10/_4_thursday/dusk/ANGULAR_%E2%99%A5_RAILS.md)
-
+[Angular Guide Introduction](https://docs.angularjs.org/guide/introduction
+)
 
 ##Intro
-
-[Pre-reading](https://docs.angularjs.org/guide/introduction
-)
 
 AngularJS is a client-side Javascript framework for adding interactivity to HTML. It lets you use HTML as your template language and lets you extend HTML's syntax to express your application's components clearly and succinctly.
 
@@ -61,6 +53,10 @@ Angular is an MVC. The...
 
 Angular creates it's view by templating directly into HTML with `{{ angularExpressions }}`. This is a declarative way of building the UI.
 
+##Controllers?
+
+
+
 ##Data Binding
 
 ####1 way
@@ -73,16 +69,6 @@ Quantum entanglement exemplifies two-way data binding. If two electrons are enta
 
 ![entangled](http://www.geekpause.com/wp-content/uploads/2014/08/quantum-entanglement1.png)
 
-##Builtin Directives
-
-* `ng-repeat`
-
-##Scope
-
-The interface to pass data into our Views
-
-![scope](http://devgirl.org/wp-content/uploads/2013/03/concepts-controller.png)
-
 ##[Filters](https://docs.angularjs.org/api/ng/filter)
 Alters the representation of the view. Experiment with: 
 
@@ -91,9 +77,6 @@ Alters the representation of the view. Experiment with:
 * `limitTo`
 * `orderBy`
 
-##Controllers
-
-Controllers contain the application's business logic, which can be imperatively called on from the View.
 
 ##Directives
 
@@ -113,12 +96,25 @@ Angular directives start with the prefix `ng-`
 [Cheatsheet](http://www.cheatography.com/proloser/cheat-sheets/angularjs/)
 
 
----
-####Nice to have
+##Scope
 
-##Factories
+The interface to pass data into our Views
 
-* Creates a *singleton* in order to maintain state throughout the application.
+![scope](http://devgirl.org/wp-content/uploads/2013/03/concepts-controller.png)
+
+
+##Custom Filters?
+
+##HW?
+* [8 steps instructions](https://github.com/sf-wdi-17/notes/blob/master/lectures/week-10/_1_monday/dusk/eight_step_angular.md)
+
+
+#Angular Ref
+
+* [Intro Angular](https://github.com/sf-wdi-17/notes/blob/master/lectures/week-10/_1_monday/dusk/intro_to_angular.md)
+
+
+* [Angular Quora](https://github.com/sf-wdi-17/notes/blob/master/lectures/week-10/_4_thursday/dusk/ANGULAR_%E2%99%A5_RAILS.md)
 
 
 
