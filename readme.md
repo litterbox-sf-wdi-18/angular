@@ -2,13 +2,14 @@
 
 | **Learning Objectives** |
 | :---- |
-| Comprehend the philosophy of Angular |
-| Setup an Angular project |
-| Write expressions |
-| Implement data binding |
+| Grok Angular's philosophy |
+| Initialize Angular in an HTML view |
+| Experiment with templating & expressions |
+| Organize your code with controllers |
+| Pass data between the View & Controller with $scope|
 | Leverage built-in filters |
 | Leverage built-in directives |
-| Conceptualize and use $scope |
+| Implement 2-way data binding |
 
 
 #Prereading Highlights
