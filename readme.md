@@ -71,7 +71,7 @@ Most applications will have several controllers that map to a particular resourc
 
 To use our controller somewhere in our View we have to declare it. Create a new `div` tag that will house our Pokemon Controller.
 
-```
+```html
 <div ng-controller="PokemonCtrl">
 	<!--placeholder for now-->
 </div>
@@ -117,7 +117,7 @@ app.controller("PokemonCtrl", function($scope){
 
 Great, now let's see if we can see them in our view by referencing the `pokemon` variable inside an expression and wrapping it in a `pre` tag.
 
-```
+```html
 <div ng-controller="PokemonCtrl">
 	<pre>{{ pokemon }}</pre>
 </div>
@@ -127,9 +127,9 @@ That's cool, but it doesn't look very great. What if we could format our data so
 
 ###Challenge
 
-1) Try using an Angular [filter](https://docs.angularjs.org/guide/filter) to render the data as JSON! Here are a [list](https://docs.angularjs.org/api/ng/filter) of options you can implement.
+* Use an Angular [filter](https://docs.angularjs.org/guide/filter) to render the data as JSON! Here are a [list](https://docs.angularjs.org/api/ng/filter) of options you can implement.
 
-2) Pass a new variable `catchphrase` from the Controller to the View. Set it's value as "gotta catch 'em all!" and use an angular filter to uppercase it in the View.
+* Pass a new variable `catchphrase` from the Controller to the View. Set it's value as "gotta catch 'em all!" and use an angular filter to uppercase it in the View.
 
 
 ##[Directives](https://docs.angularjs.org/guide/directive)
@@ -157,7 +157,7 @@ Our user wants to be able to input their name in a field, so that the applicatio
 
 Above our list of Pokemon, but still inside our `PokemonCtrl` `div` tag, let's create an input field for our trainers name.
 
-```
+```html
   <div ng-controller="PokemonCtrl">
   
     <span>Enter your name:</span>
@@ -170,16 +170,16 @@ Above our list of Pokemon, but still inside our `PokemonCtrl` `div` tag, let's c
 
 If we want our input field to map it's value to a variable called `trainer` we could add an `ng-model` directive to it.
 
-```
-<input ng-model="trainer"/>
+```html
+<input ng-model="trainer.name"/>
 ```
 
 Additionally if we want the value of the `trainer` variable to be printed on onto our page in an `h1` tag, we can reference it in an expression, such that our HTML looks like:
 
-```
+```html
   <div ng-controller="PokemonCtrl">
   
-    <h1>Trainer: {{trainer}}</h1>
+    <h1>Trainer: {{trainer.name}}</h1>
     
     <span>Enter your name:</span>
     <input ng-model="trainer"/>
@@ -192,7 +192,7 @@ Additionally if we want the value of the `trainer` variable to be printed on ont
 
 ###Challenge
 
-How could we create a default value for the `trainer` so that when the page loads it is set to `Ash`?
+* How could we create a default value for the trainer's name so that when the page loads it is set to `Ash`?
 
 ###ng-repeat
 
@@ -213,9 +213,20 @@ There are many more directives. For now, know that they exist and why they may b
 
 ###Challenge
 
-1) Sort the Pokemon by nDex number.
-2) Create an input tag so that I can search for a particular Pokemon.
+* Sort the Pokemon by nDex number.
+* Create an input tag so that I can search for a particular Pokemon.
 
+##Custom Filters
+
+We've been notified that there is a new set of Pokemon in an alternate universe consisting of arch-nemeses. Pikachu's arch nemesis is Uhcakip, while Snorlax's is Xalrons. Let's construct a table that displays all the arch-nemeses. 
+
+```js
+app.filter('reverse', function() {
+  return function(items) {
+    return items.slice().reverse();
+  };
+});
+```
 
 ##Pro-tip: Minification in Angular
 
@@ -250,9 +261,6 @@ app.controller('PokemonCtrl', ['$scope', '$http', function($scope, $http) {
 While our arguments will get minified, the strings will not. The names of arguments are significant, because the injector uses these to look up the dependencies.
 
 This is one of the worst, most confusing parts of Angular. Hang in there!
-
-##Bonus: Custom Filters
-
 
 
 ##HW Exercise
