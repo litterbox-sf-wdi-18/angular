@@ -122,7 +122,7 @@ Great, now let's see if we can see them in our view by referencing the `pokemon`
 </div>
 ```
 
-That's cool, but it doesn't look very good... What if we could format our data so that the View knows to render it as JSON.
+That's cool, but it doesn't look very great. What if we could format our data so that the View knows to render it as JSON?
 
 ###Challenge
 
@@ -131,49 +131,100 @@ That's cool, but it doesn't look very good... What if we could format our data s
 2) Pass a new variable `catchphrase` from the Controller to the View. Set it's value as "gotta catch 'em all!" and use an angular filter to uppercase it in the View.
 
 
-##Directives
+##[Directives]
 
-
-####Directives to know
-
-In Angular, we add behavior to HTML through directives. A directive is a marker on a HTML tag that tells Angular to run or reference Angular code.
+In Angular, we add behavior to HTML through directives. A directive is a marker on a HTML tag that tells Angular to run or reference Angular code. You've already used several!
 
 Angular directives start with the prefix `ng-`
 
+A few we already know:
+
 `ng-app` turns ordinary HTML into an Angular application.
 
-`ng-model` binds an HTML element's value to a model, bidirectionally (2way).
+`ng-controller` registers a controller for a section of our application.
 
-`ng-repeat` ...
+A few worth introducing:
 
-[Cheatsheet](http://www.cheatography.com/proloser/cheat-sheets/angularjs/)
+`ng-model` binds an HTML element's value to a model.
 
-
-##Data Binding
-
-####1 way
-A joystick on a remote controller for a drone exemplifies 1-way data binding. If the joystick moves, so does the drone; however, if the drone is moved, the joystick does not respond.
-
-![drone-joystick](http://robohub.org/wp-content/uploads/2013/01/ARDroneJoystickControl.png)
-
-####2 way
-Quantum entanglement exemplifies two-way data binding. If two electrons are entangled and a change happens to *either*, the other electron's state is updated immediately to reflect the change.
-
-![entangled](http://www.geekpause.com/wp-content/uploads/2014/08/quantum-entanglement1.png)
+`ng-repeat` iterates over a collection.
 
 
-##Custom Filters?
+###ng-Model
 
-##HW?
+Our user wants to be able to input their name in a field, so that the application acknowledges them as the trainer for these Pokemon.
+
+Above our list of Pokemon, but still inside our `PokemonCtrl` `div` tag, let's create an input field for our trainers name.
+
+```
+  <div ng-controller="PokemonCtrl">
+  
+    <span>Enter your name:</span>
+    <input/>
+    
+    <pre>{{ pokemon | json }}</pre>
+    
+  </div>
+```
+
+If we want our input field to map it's value to a variable called `trainer` we could add an `ng-model` directive to it.
+
+```
+<input ng-model="trainer"/>
+```
+
+Additionally if we want the value of the `trainer` variable to be printed on onto our page in an `h1` tag, we can reference it in an expression, such that our HTML looks like:
+
+```
+  <div ng-controller="PokemonCtrl">
+  
+    <h1>Trainer: {{trainer}}</h1>
+    
+    <span>Enter your name:</span>
+    <input ng-model="trainer"/>
+    
+    <pre>{{ pokemon | json }}</pre>
+    
+  </div>
+```
+
+
+###Challenge
+
+How could we create a default value for the `trainer` so that when the page loads it is set to `Ash`?
+
+###ng-repeat
+
+`ngRepeat` is a very useful directive for rendering a collection while writing a minimal amount of HTML.
+
+###Challenge
+
+Rendering the JSON Pokemon in a bootstrap table, where each attribute is a column. The final result should look like this:
+
+<!--result-->
+
+Hint: add bootstrap into your project by clicking `Add Library`
+
+###etc
+
+There are many more directives. It is good to know that they exist and which ones are useful in what situations. Beyond that, it totally fine to rely on referencing the documentation. You can find a comprehensive list [here](https://docs.angularjs.org/api/ng/directive).
+
+
+
+###Challenge
+
+1) Sort the Pokemon by nDex number.
+2) Create an input tag so that I can search for a particular Pokemon.
+
+
+##Bonus: Custom Filters
+
+...
+
+
+##HW Exercise
 * [8 steps instructions](https://github.com/sf-wdi-17/notes/blob/master/lectures/week-10/_1_monday/dusk/eight_step_angular.md)
 
-
-#Angular Ref
-
-* [Intro Angular](https://github.com/sf-wdi-17/notes/blob/master/lectures/week-10/_1_monday/dusk/intro_to_angular.md)
-
-
-* [Angular Quora](https://github.com/sf-wdi-17/notes/blob/master/lectures/week-10/_4_thursday/dusk/ANGULAR_%E2%99%A5_RAILS.md)
 
 
 
