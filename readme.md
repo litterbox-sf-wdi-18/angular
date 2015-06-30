@@ -132,7 +132,7 @@ That's cool, but it doesn't look very great. What if we could format our data so
 2) Pass a new variable `catchphrase` from the Controller to the View. Set it's value as "gotta catch 'em all!" and use an angular filter to uppercase it in the View.
 
 
-##[Directives]
+##[Directives](https://docs.angularjs.org/guide/directive)
 
 In Angular, we add behavior to HTML through directives. A directive is a marker on a HTML tag that tells Angular to run or reference Angular code. You've already used several!
 
@@ -202,14 +202,13 @@ How could we create a default value for the `trainer` so that when the page load
 
 Rendering the JSON Pokemon in a bootstrap table, where each attribute is a column. The final result should look like this:
 
-<!--result-->
+![pokemon-table](http://i.imgur.com/or1CwF7.png)
 
 Hint: add bootstrap into your project by clicking `Add Library`
 
 ###etc
 
-There are many more directives. It is good to know that they exist and which ones are useful in what situations. Beyond that, it totally fine to rely on referencing the documentation. You can find a comprehensive list [here](https://docs.angularjs.org/api/ng/directive).
-
+There are many more directives. For now, know that they exist and why they may be useful. Beyond that rely on referencing the documentation. You can find a comprehensive list [here](https://docs.angularjs.org/api/ng/directive). Learning them in depth will only come with building.
 
 
 ###Challenge
@@ -218,13 +217,42 @@ There are many more directives. It is good to know that they exist and which one
 2) Create an input tag so that I can search for a particular Pokemon.
 
 
-##Protip: Minification
+##Pro-tip: Minification in Angular
 
-...
+Remember the main goal in [minification](https://en.wikipedia.org/wiki/Minification_(programming)) is to save space and deliver the file quickly. A variable `myVariableName` may be renamed to `A` during minification. The computer doesn't care what the name is as long as they are consistent.
+
+If you ever minify your angular code when delivering it from a server to a client your variables will be renamed and this may cause problems. We're used to seeing code like this.
+
+```js
+app.controller("PokemonCtrl", function() {
+  //
+});
+```
+
+To allow minifiers to rename the function parameters and still be able to inject the right services, we need to explicitly `$inject` the arguments we want into our controller.
+
+```js
+var PokemonCtrl = function($scope, $http) {
+  //
+};
+PokemonCtrl.$inject = ['$scope', '$http'];
+app.controller('PokemonCtrl', PokemonCtrl);
+```
+
+or we can pass our controller an array that contains an array of our dependencies and a function, whose arguments have a 1 to 1 correspondence to the previous items.
+
+```js
+app.controller('PokemonCtrl', ['$scope', '$http', function($scope, $http) {
+  //
+}]);
+```
+
+While our arguments will get minified, the strings will not. The names of arguments are significant, because the injector uses these to look up the dependencies.
+
+This is one of the worst, most confusing parts of Angular. Hang in there!
 
 ##Bonus: Custom Filters
 
-...
 
 
 ##HW Exercise
