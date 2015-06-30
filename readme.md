@@ -242,7 +242,7 @@ If you ever minify your angular code when delivering it to a client your variabl
 
 ```js
 app.controller("PokemonCtrl", function() {
-  //
+  
 });
 ```
 
@@ -250,7 +250,7 @@ To allow minifiers to rename the function parameters and still be able to inject
 
 ```js
 var PokemonCtrl = function($scope, $http) {
-  //
+  
 };
 PokemonCtrl.$inject = ['$scope', '$http'];
 app.controller('PokemonCtrl', PokemonCtrl);
@@ -260,7 +260,7 @@ or we can pass our controller an array that contains an array of our dependencie
 
 ```js
 app.controller('PokemonCtrl', ['$scope', '$http', function($scope, $http) {
-  //
+  
 }]);
 ```
 
@@ -271,7 +271,6 @@ This is one of the worst, most confusing parts of Angular. Hang in there!
 
 ##HW Exercise
 * [8 steps instructions](https://github.com/sf-wdi-17/notes/blob/master/lectures/week-10/_1_monday/dusk/eight_step_angular.md)
-
 
 
 
