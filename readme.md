@@ -217,6 +217,10 @@ There are many more directives. It is good to know that they exist and which one
 2) Create an input tag so that I can search for a particular Pokemon.
 
 
+##Protip: Minification
+
+...
+
 ##Bonus: Custom Filters
 
 ...
