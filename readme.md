@@ -168,13 +168,13 @@ Above our list of Pokemon, but still inside our `PokemonCtrl` `div` tag, let's c
   </div>
 ```
 
-If we want our input field to map it's value to a variable called `trainer` we could add an `ng-model` directive to it.
+If we want our input field to map its value to an attribute `name` on a `trainer` object we could add an `ng-model` directive to it.
 
 ```html
 <input ng-model="trainer.name"/>
 ```
 
-Additionally if we want the value of the `trainer` variable to be printed on onto our page in an `h1` tag, we can reference it in an expression, such that our HTML looks like:
+Additionally if we want the value of the `trainer.name` variable to be printed onto our page in an `h1` tag, we can reference it in an expression, such that our HTML looks like:
 
 ```html
   <div ng-controller="PokemonCtrl">
@@ -208,7 +208,7 @@ Hint: add bootstrap into your project by clicking `Add Library`
 
 ###etc
 
-There are many more directives. For now, know that they exist and why they may be useful. Beyond that rely on referencing the documentation. You can find a comprehensive list [here](https://docs.angularjs.org/api/ng/directive). Learning them in depth will only come with building.
+There are many more directives. For now, know that they exist and why they may be useful. Beyond that, reference the documentation. You can find a comprehensive list [here](https://docs.angularjs.org/api/ng/directive). By now you should know that memorizing each by heart is a fruitless exercise.
 
 
 ###Challenge
