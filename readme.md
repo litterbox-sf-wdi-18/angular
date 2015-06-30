@@ -269,8 +269,5 @@ While our arguments will get minified, the strings will not. The names of argume
 This is one of the worst, most confusing parts of Angular. Hang in there!
 
 
-##HW Exercise
-* [8 steps instructions](https://github.com/sf-wdi-17/notes/blob/master/lectures/week-10/_1_monday/dusk/eight_step_angular.md)
-
 
 
