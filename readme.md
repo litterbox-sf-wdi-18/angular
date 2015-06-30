@@ -218,7 +218,9 @@ There are many more directives. For now, know that they exist and why they may b
 
 ##Custom Filters
 
-We've been notified that there is a new set of Pokemon in an alternate universe consisting of arch-nemeses. Pikachu's arch nemesis is Uhcakip, while Snorlax's is Xalrons. Let's construct a table that displays all the arch-nemeses. 
+We've been notified that there is a new set of Pokemon in an alternate universe consisting of arch-nemeses. Pikachu's arch nemesis is Uhcakip, while Snorlax's is Xalrons. Let's construct a table that displays all the arch-nemeses.
+
+Angular doesn't have a `reverse` filter, so let's create one.
 
 ```js
 app.filter('reverse', function() {
@@ -228,11 +230,15 @@ app.filter('reverse', function() {
 });
 ```
 
+###Challenge
+
+* Create a new table of Pokemon with the names reversed representing their arch nemeses.
+
 ##Pro-tip: Minification in Angular
 
-Remember the main goal in [minification](https://en.wikipedia.org/wiki/Minification_(programming)) is to save space and deliver the file quickly. A variable `myVariableName` may be renamed to `A` during minification. The computer doesn't care what the name is as long as they are consistent.
+Remember the main goal in [minification](https://en.wikipedia.org/wiki/Minification_(programming)) is to save space and deliver the file quickly. A variable `myVariableName` may be renamed to `A` during minification. A computer doesn't care what the name is as long as they are consistent.
 
-If you ever minify your angular code when delivering it from a server to a client your variables will be renamed and this may cause problems. We're used to seeing code like this.
+If you ever minify your angular code when delivering it to a client your variables will be renamed and this may cause problems. We're used to seeing code like this.
 
 ```js
 app.controller("PokemonCtrl", function() {
